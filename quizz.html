@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz !</title>
+    <style>
+        body {
+            display: grid;
+            font-family: 'Courier New', Courier, monospace;
+           margin: 0;
+           padding: 0;
+           background: linear-gradient(to right,
+           white, blue);
+           height: 100vh;
+           place-items: center;
+        }
+        .bloc {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #submit-btn, #replay-btn {
+            background-color: blue;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height: 35px;
+            border-style: none;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #submit-btn:hover {
+            width: 180px;
+            height: 40px;
+        }
+    </style>
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <div class="bloc" id="bloc">
+        <h1>Quiz: <span class="categorie"></span></h1>
+        <form action="" id="quiz-form">
+            <!-- Les questions seront insérées ici -->
+        </form>
+        <button id="submit-btn">Soumettre</button>
+        <div id="stats"></div>
+        <button id="replay-btn" style="display:none;">Rejouer</button>
+    </div>
+</body>
+</html>

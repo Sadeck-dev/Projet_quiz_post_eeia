@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choix de categories</title>
+    <style>
+        body {
+            display: grid;
+            font-family: 'Courier New', Courier, monospace;
+           margin: 0;
+           padding: 0;
+           background: linear-gradient(to right,
+           white, blue);
+           height: 100vh;
+           place-items: center;
+        }
+        .bloc {
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .bloc > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px;
+        }
+        .bloc > div > div {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            flex: 1 1 calc(25% - 10px);
+            height: 100px;
+            width: 150px;
+            background: linear-gradient(to right, blue, white);
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .bloc > div > div:hover {
+            cursor: pointer;
+            background: linear-gradient(to right, white, blue);
+            font-size: 20px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="bloc">
+        <h1 class="title">Bienvenue dans le Quizz !</h2>
+        <h2>Choisissez une catégorie et jouez !</h2>
+        <div class="grid">
+            <div onclick="choisirCategorie('IG')">Informatique générale</div>
+            <div onclick="choisirCategorie('HI')">Histoire</div>
+            <div onclick="choisirCategorie('SD')">Science des données</div>
+            <div onclick="choisirCategorie('ML')">Machine Learning</div>
+            <div onclick="choisirCategorie('DL')">Deep Learning</div>
+            <div onclick="choisirCategorie('MI')">Mathématique Informatique</div>
+            <div onclick="choisirCategorie('ER')">Electronique et Robotique</div>
+            <div onclick="choisirCategorie('SEEIA')">Spécial EEIA</div>
+        </div>
+    </div>
+    <script>
+        function choisirCategorie(cat) {
+            localStorage.setItem("categorie", cat)
+            window.location.href = "quizz.html"
+        }
+    </script>
+</body>
+</html>
