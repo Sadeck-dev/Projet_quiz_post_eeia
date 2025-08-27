@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz informatique</title>
+    <style>
+        body {
+            display: grid;
+            font-family: 'Courier New', Courier, monospace;
+           margin: 0;
+           padding: 0;
+           background: linear-gradient(to right,
+           white, blue);
+           height: 100vh;
+           place-items: center;
+        }
+        .titre  {
+            color: black;
+        }
+        .button {
+            font-size: 20px;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .bloc {
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .soustitre {
+            background-color: rgb(236, 233, 233);
+            border-radius: 10px;
+            border-left: 10px blue solid;
+            padding: 15px;
+            margin: 10px;
+        }
+        .consigne {
+            color: rgb(202, 48, 48);
+            margin: 10px;
+        }
+        .bouton {
+            background-color: blue;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height: 35px;
+            border-style: none;
+        }
+        .bouton:hover {
+            width: 180px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bloc accueil">
+        <h1 class="titre">Le Quizzzzzzz ! &#x1F60E;</h1>
+        <h2 class="soustitre">Vous avez des connaissances en informatique générale, science des données ou intelligence artificielle ? Ok !</h2>
+        <h3 class="consigne"><i>Appuiyez dès maintenant sur "commencer" et tester vos connaissances !</i></h3>
+        <button class="bouton"><span class="button" id="start-btn">Commencer</span></button>
+    </div>
+
+    <script>
+        document.getElementById("start-btn").addEventListener("click", () => {
+            window.location.href = "categories.html";
+        })
+    </script>
+</body>
+</html>
